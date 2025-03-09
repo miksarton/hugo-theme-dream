@@ -1,25 +1,25 @@
 # Alerts
 note = "Note"
 tip = "Tip"
-important = "Important"
+important = "Game Info"
 warning = "Warning"
-caution = "Caution"
+caution = "Issue"
 
 home = "Home"
-backToHome = "Back to home"
-flip = "Flip it!"
+backToHome = "Back to Home"
+flip = "Flip"
 about = "About"
 search = "Search"
-prevPage = "Previous page"
-nextPage = "Next page"
+prevPage = "Previous Page"
+nextPage = "Next Page"
 
 archives = "Archives"
-allCategories = "All Categories"
-allTags = "All Tags"
+allCategories = "Categories"
+allTags = "Tags"
 
 minuteRead = " minute read"
 updatedAt = "Updated at"
-socialLinks = "Social Links"
+socialLinks = "Socials"
 
 [article]
 one = "1 article"

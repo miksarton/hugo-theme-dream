@@ -1,8 +1,10 @@
 <div>
   {{ if site.Params.siteStartYear }}
-  <p>
+  <p class="text-sm">
+    <span class="text-base-content/60">
     © {{ if eq now.Year site.Params.siteStartYear }}{{ now.Year }}{{ else }}{{ site.Params.siteStartYear }} - {{
     now.Year }}{{ end }} {{ site.Title }}
+    </span>
   </p>
   {{ else }}
   <p>© {{ now.Year }} {{ site.Title }}</p>

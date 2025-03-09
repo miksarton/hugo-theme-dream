@@ -3,7 +3,7 @@
 {{ with site.GetPage "/about" }}
 {{ $aboutPages := .Resources.ByType "page" }}
 {{ if gt (len $aboutPages) 0 }}
-<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="{{ T "about" }}">
+<div role="link" tabindex="0" class="text-sm p-2 rounded-full cursor-pointer hover:bg-primary" @click="flip = !flip" title="{{ T "about" }}">
   {{- T "about" -}}
 </div>
 {{ end }}
@@ -18,15 +18,15 @@
   <ion-icon class="group-hover:text-primary-content" name="logo-rss"></ion-icon>
 </a>
 {{ else if and (eq . "posts") (gt (len (where site.RegularPages "Type" "posts")) 0) }}
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="{{ "posts" | relLangURL }}" title="{{ T "archives" }}">
+<a class="group inline-flex items-center text-sm p-2 rounded-full cursor-pointer hover:bg-primary" href="{{ "posts" | relLangURL }}" title="{{ T "archives" }}">
   <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
 </a>
 {{ else if and (eq . "categories") site.Taxonomies.categories }}
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="{{ "categories" | relLangURL }}" title="{{ T "allCategories" }}">
+<a class="group inline-flex items-center text-sm p-2 rounded-full cursor-pointer hover:bg-primary" href="{{ "categories" | relLangURL }}" title="{{ T "allCategories" }}">
   <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
 </a>
 {{ else if and (eq . "tags") site.Taxonomies.tags }}
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="{{ "tags" | relLangURL }}" title="{{ T "allTags" }}">
+<a class="group inline-flex items-center text-sm p-2 rounded-full cursor-pointer hover:bg-primary" href="{{ "tags" | relLangURL }}" title="{{ T "allTags" }}">
   <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
 </a>
 {{ else }}
