@@ -4,6 +4,8 @@
     {{ with .Resources.Get .Params.cover }}
     {{ if eq .MediaType.SubType "svg" }}
       <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
+    {{ else if eq .MediaType.SubType "gif" }}
+      <img src="{{ .RelPermalink }}" alt="{{ .Title }}" loading="eager" />
     {{ else }}
       {{ $webp := .Resize (printf "%dx%d webp" .Width .Height) }}
       <picture>
